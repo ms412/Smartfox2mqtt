@@ -1,0 +1,18 @@
+#Contents of /etc/systemd/system/Smartfox2mqtt.service
+#systemctl daemon-reload
+#systemctl enable Smartfox2mqtt.service
+#systemctl start Smartfox2mqtt.service
+
+[Unit]
+Description= Smartfox to Mqtt gateway
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/opt/Smartfox2mqtt/Smartfox2mqtt.py /opt/Smartfox2mqtt/Smartfox2mqtt.config
+Restart=on-failure
+RestartSec=5s
+
+
+[Install]
+WantedBy=multi-user.target
