@@ -27,7 +27,7 @@ import time
 import json
 import logging
 from configobj import ConfigObj
-from smartfox import Smartfox
+#from smartfox import Smartfox
 
 from library.mqttclientV2 import mqttclient
 from library.logger import loghandler
@@ -66,7 +66,7 @@ class SmartfoxController(object):
         self._configLog = _config.get('LOGGING',None)
         self._configSmartfox = _config.get('SMARTFOX',None)
        # self._configInverter = _config.get('INVERTER', None)
-        print(self._configSmartfox)
+        #print(self._configSmartfox)
 
         return True
 
